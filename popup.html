@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI Image Detector</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+    button {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0;
+      cursor: pointer;
+    }
+    #imageUpload {
+      display: none;
+    }
+    .upload-btn {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+    }
+    #status {
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 4px;
+    }
+    #result {
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 4px;
+      display: none;
+    }
+    .details {
+      font-size: 12px;
+      color: #666;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2>AI Image Detector</h2>
+  <input type="file" id="imageUpload" accept="image/*">
+  <button id="uploadButton" class="upload-btn">Upload Image</button>
+  <button id="detectButton">Detect AI Images on Page</button>
+  <div id="status"></div>
+  <div id="result">
+    <h3>Analysis Result:</h3>
+    <div id="classification"></div>
+    <div id="details" class="details"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
